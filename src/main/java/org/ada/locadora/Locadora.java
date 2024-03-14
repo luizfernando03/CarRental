@@ -6,8 +6,8 @@ import java.util.List;
 
 public class Locadora {
 
-    private List<Cliente> clientes;
-    private List<Veiculo> veiculos;
+    private List<ClienteImpl> clientes;
+    private List<VeiculoImpl> veiculos;
     private List<Aluguel> alugueis;
 
 
@@ -17,19 +17,19 @@ public class Locadora {
         this.alugueis = new ArrayList<>();
     }
 
-    public void cadastrarCliente(Cliente cliente) {
+    public void cadastrarCliente(ClienteImpl cliente) {
         if (!clientes.contains(cliente)) {
             clientes.add(cliente);
         }
     }
 
-    public void cadastrarVeiculo(Veiculo veiculo) {
+    public void cadastrarVeiculo(VeiculoImpl veiculo) {
         if (!veiculos.contains(veiculo)) {
             veiculos.add(veiculo);
         }
     }
 
-    public void alugarVeiculo(Veiculo veiculo, Cliente cliente, LocalDateTime dataAluguel, LocalDateTime dataDevolucao) {
+    public void alugarVeiculo(VeiculoImpl veiculo, ClienteImpl cliente, LocalDateTime dataAluguel, LocalDateTime dataDevolucao) {
         if (!veiculo.isDisponivel()) {
             System.out.println("O veiculo esta disponivel para aluguel");
             return;
@@ -38,14 +38,14 @@ public class Locadora {
             System.out.println("Data da devolução é anterior a data do Aluguel! ");
             return;
         }
-        veiculo.setDisponivel(false);
+        veiculo.isDisponivel(false);
         Aluguel aluguel = new Aluguel (veiculo, cliente, dataAluguel, dataDevolucao);
         alugueis.add(aluguel);
 
     }
-    public void devolvverVeiculo(Veiculo veiculo) {
+    public void devolvverVeiculo(VeiculoImpl veiculo) {
         for (Aluguel aluguel : alugueis) {
-            
+
         }
     }
 
