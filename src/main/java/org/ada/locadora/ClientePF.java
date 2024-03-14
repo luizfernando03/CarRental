@@ -14,12 +14,12 @@ public class ClientePF implements Cliente{
 
     @Override
     public String getIdentificador() {
-        return null;
+        return cpf;
     }
 
     @Override
     public String getTipo() {
-        return null;
+        return tipo;
     }
 
     public void setNome(String nome) {

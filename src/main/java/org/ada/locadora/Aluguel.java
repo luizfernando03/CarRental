@@ -15,4 +15,5 @@ public class Aluguel {
         this.dataAluguel = dataAluguel;
         this.dataDevolucao = dataDevolucao;
     }
+    
 }

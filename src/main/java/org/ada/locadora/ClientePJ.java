@@ -2,12 +2,12 @@ package org.ada.locadora;
 
 public class ClientePJ implements Cliente{
     private String cnpj;
-    private String nome;
+    private String nomeEmpresa;
     private String tipo;
 
     public ClientePJ(String cnpj, String nome, String tipo) {
         this.cnpj = cnpj;
-        this.nome = nome;
+        this.nomeEmpresa = nomeEmpresa;
         this.tipo = tipo;
     }
 
@@ -21,23 +21,9 @@ public class ClientePJ implements Cliente{
         return tipo;
     }
 
-    public String getCnpj() {
-        return cnpj;
+    public void setNomeEmpresa(String nomeEmpresa) {
+        this.nomeEmpresa = nomeEmpresa;
     }
 
-    public void setCnpj(String cnpj) {
-        this.cnpj = cnpj;
-    }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
 }
